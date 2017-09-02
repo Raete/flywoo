@@ -9,7 +9,7 @@ const browserSync  = require('browser-sync');
       uglify       = require('gulp-uglify'),
 
 gulp.task('styles', () => {
-    return gulp.src('css/main-style.scss')
+    return gulp.src('scss/main-style.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
@@ -54,7 +54,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', ['browser-sync', 'build'], () => {
-    gulp.watch('css/**/*.scss', ['styles']);
+    gulp.watch('scss/**/*.scss', ['styles']);
     gulp.watch('js/main.js', ['scripts']);
 });
 
