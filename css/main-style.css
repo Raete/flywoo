@@ -1,9 +1,30 @@
+/*
+***********
+COLORS
+************
+*/
+/*
+***********
+FONTS
+************
+*/
+/*
+***********
+GENERAL SETTINGS
+************
+*/
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2; }
 
+/*
+***********
+PARALLAX
+************
+*/
 .logo {
   font-size: 30px;
   font-weight: 900;
@@ -37,34 +58,69 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     position: absolute; }
-    .art_layer--0 {
-      background-image: url("../img/parallax/10.png");
-      background-color: white; }
     .art_layer--1 {
-      background-image: url("../img/parallax/w09.png"); }
+      background-color: #f2f2f2; }
     .art_layer--2 {
-      background-image: url("../img/parallax/08.png"); }
+      background-image: url("../img/parallax/11.png"); }
     .art_layer--3 {
-      background-image: url("../img/parallax/w07.png"); }
+      background-image: url("../img/parallax/w10.png"); }
     .art_layer--4 {
-      background-image: url("../img/parallax/06.png"); }
+      background-image: url("../img/parallax/w09.png"); }
     .art_layer--5 {
-      background-image: url("../img/parallax/w05.png"); }
+      background-image: url("../img/parallax/08.png"); }
     .art_layer--6 {
-      background-image: url("../img/parallax/04.png"); }
+      background-image: url("../img/parallax/w07.png"); }
     .art_layer--7 {
-      background-image: url("../img/parallax/03.png"); }
+      background-image: url("../img/parallax/06.png"); }
     .art_layer--8 {
-      background-image: url("../img/parallax/w02.png"); }
+      background-image: url("../img/parallax/w05.png"); }
     .art_layer--9 {
+      background-image: url("../img/parallax/04.png"); }
+    .art_layer--10 {
+      background-image: url("../img/parallax/w03.png"); }
+    .art_layer--11 {
+      background-image: url("../img/parallax/02.png"); }
+    .art_layer--12 {
       background-image: url("../img/parallax/01.png"); }
 
 .art_layer.parallax {
   position: fixed; }
 
+/*
+***********
+ARTICLE
+************
+*/
 .container {
-  margin-top: 60px;
   position: relative;
-  background: #ececed;
-  height: 1000px;
-  z-index: 100; }
+  background: #f2f2f2;
+  z-index: 100;
+  overflow: hidden .container -wrapper;
+    overflow-max-width: 1170px;
+    overflow-margin: 0 auto; }
+
+.article {
+  width: 50%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  padding-top: 100px; }
+  .article-h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #e20079;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px; }
+  .article-p {
+    color: #e20079;
+    line-height: 25px; }
+  .article-img {
+    margin-top: 100px;
+    width: 100%;
+    height: auto; }
+
+/*
+***********
+FOOTER
+************
+*/
