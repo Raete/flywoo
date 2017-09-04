@@ -1,5 +1,4 @@
-const browserSync  = require('browser-sync');
-      gulp         = require('gulp'),
+const gulp         = require('gulp');
       autoprefixer = require('gulp-autoprefixer'),
       cleanCSS     = require('gulp-clean-css'),
       include      = require('gulp-include'),
@@ -39,22 +38,8 @@ gulp.task('scripts', () => {
         .pipe(gulp.dest('js'));
 });
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    files: [
-      '*.html',
-      './css/*.min.css',
-      './js/*.min.js',
-      './img/*'
-    ],
-    server: {
-      baseDir: './'
-    },
-    browser: {'google chrome'}
-  });
-});
 
-gulp.task('watch', ['browser-sync', 'build'], () => {
+gulp.task('watch', ['build'], () => {
     gulp.watch('scss/**/*.scss', ['styles']);
     gulp.watch('js/main.js', ['scripts']);
 });
