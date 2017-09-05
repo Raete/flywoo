@@ -1,0 +1,294 @@
+@import '_variables.scss';
+
+/*
+***********
+GENERAL SETTINGS
+************
+*/
+
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $font-1;
+    background-color: $color-1;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+/*
+***********
+PARALLAX
+************
+*/
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: $color-2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    span {
+        color: $color-3;
+    }
+}
+
+.art, .art_layer {
+    height: 1000px;
+}
+
+#parallax {
+    display: block;
+}
+
+#nonparallax {
+    display: none;
+}
+
+.art {
+    position: relative;
+    z-index: 10;
+    &_layer {
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        &--1 {
+            background-color: $color-1;
+        }
+        &--2 {
+            background-image: url('../img/parallax/12.svg');
+        }
+        &--3 {
+            background-image: url('../img/parallax/w11.svg');
+        }
+        &--4 {
+            background-image: url('../img/parallax/w10.svg');
+        }
+        &--5 {
+            background-image: url('../img/parallax/09.svg');
+        }
+        &--6 {
+            background-image: url('../img/parallax/w08.svg');
+        }
+        &--7 {
+            background-image: url('../img/parallax/07.svg');
+        }
+        &--8 {
+            background-image: url('../img/parallax/w06.svg');
+        }
+        &--9 {
+            background-image: url('../img/parallax/05.svg');
+        }
+        &--10 {
+            background-image: url('../img/parallax/w04.svg');
+        }
+        &--11 {
+            background-image: url('../img/parallax/03.svg');
+        }
+        &--12 {
+            background-image: url('../img/parallax/02.svg');
+        }
+    }
+}
+
+.art_layer.parallax {
+    position: fixed;
+}
+
+/* --- mobile --- */
+@media screen and (max-width: 400px) {
+
+    .logo {
+        padding-top: 15px;
+    }
+
+    #parallax {
+        display: none;
+    }
+
+    #nonparallax {
+        display: block;
+        background-image: url('../img/mobil.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+    .art {
+        height: 300px
+    }
+}
+
+/*
+***********
+ARTICLE
+************
+*/
+
+.container {
+    position: relative;
+    background: $color-1;
+    z-index: 100;
+    overflow: hidden;
+    &-wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+.article {
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding: 100px 20px 100px 20px;
+    &-h1 {
+        font-size: 40px;
+        font-weight: 900;
+        color: $color-2;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    &-p {
+        color: $color-2;
+        line-height: 25px
+    }
+    &-img {
+        margin-top: 50px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .article {
+        padding-top: 30px
+    }
+}
+
+/*
+***********
+FLIGHT
+************
+*/
+
+.flight {
+    position: relative;
+    padding-bottom: 200px;
+    z-index: 100;
+    &-woo {
+        position: absolute;
+        &--1 {
+            bottom: -60px;
+        }
+         &--2 {
+            top: 180px;
+            left: 300px
+        }
+         &--3 {
+            bottom: 30px;
+            right: 400px;
+        }
+         &--4 {
+            top: 150px;
+            right: 100px;
+        }
+         &--5 {
+            right: 30px;
+        }
+        &--6 {
+            left: 100px;
+            bottom: 80px;
+        }
+    }
+}
+
+/* animace img */
+.hidden {
+  opacity: 0
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+   -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*
+***********
+FOOTER
+************
+*/
+
+.aside {
+    position: relative;
+    z-index: 80;
+    background: $color-1;
+    display: flex;
+    align-items: flex-end;
+    &-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.social {
+    position: relative;
+    padding: 100px 20px 50px 20px;
+    background: $color-2;
+    color: $color-1;
+    z-index: 80;
+    &-box {
+        max-width: 1170px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 30px;
+        &-icon {
+            margin: 10px; 
+            &:hover {
+                color: $color-3
+            }           
+        }
+    }   
+}
+
