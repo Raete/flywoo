@@ -16,6 +16,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit
+}
 /*
 ***********
 PARALLAX
@@ -45,11 +49,6 @@ PARALLAX
 
 #nonparallax {
     display: none;
-    background-image: url('../img/mobil.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
 }
 
 .art {
@@ -138,7 +137,7 @@ ARTICLE
     position: relative;
     background: $color-1;
     z-index: 100;
-    overflow: hidden
+    overflow: hidden;
     &-wrapper {
         max-width: 1170px;
         margin: 0 auto;
@@ -149,7 +148,7 @@ ARTICLE
     max-width: 600px;
     margin: 0 auto 0 auto;
     text-align: center;
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 100px 20px;
     &-h1 {
         font-size: 40px;
         font-weight: 900;
@@ -176,7 +175,84 @@ ARTICLE
     }
 }
 
+/*
+***********
+FLIGHT
+************
+*/
 
+.flight {
+    position: relative;
+    padding-bottom: 200px;
+    z-index: 100;
+    &-woo {
+        position: absolute;
+        &--1 {
+            bottom: -60px;
+        }
+         &--2 {
+            top: 180px;
+            left: 300px
+        }
+         &--3 {
+            bottom: 30px;
+            right: 400px;
+        }
+         &--4 {
+            top: 150px;
+            right: 100px;
+        }
+         &--5 {
+            right: 30px;
+        }
+        &--6 {
+            left: 100px;
+            bottom: 80px;
+        }
+    }
+}
+
+/* animace img */
+.hidden {
+  opacity: 0
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+   -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
 /*
 ***********
@@ -184,7 +260,35 @@ FOOTER
 ************
 */
 
-.fly-landing {
+.aside {
+    position: relative;
+    z-index: 80;
+    background: $color-1;
+    display: flex;
+    align-items: flex-end;
+    &-img {
+        width: 100%;
+        height: auto;
+    }
+}
 
+.social {
+    position: relative;
+    padding: 100px 20px 50px 20px;
+    background: $color-2;
+    color: $color-1;
+    z-index: 80;
+    &-box {
+        max-width: 1170px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 30px;
+        &-icon {
+            margin: 10px; 
+            &:hover {
+                color: $color-3
+            }           
+        }
+    }   
 }
 

@@ -22,6 +22,10 @@ body {
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 /*
 ***********
 PARALLAX
@@ -45,11 +49,7 @@ PARALLAX
   display: block; }
 
 #nonparallax {
-  display: none;
-  background-image: url("../img/mobil.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  display: none; }
 
 .art {
   position: relative;
@@ -112,15 +112,16 @@ ARTICLE
   position: relative;
   background: #f2f2f2;
   z-index: 100;
-  overflow: hidden .container -wrapper;
-    overflow-max-width: 1170px;
-    overflow-margin: 0 auto; }
+  overflow: hidden; }
+  .container-wrapper {
+    max-width: 1170px;
+    margin: 0 auto; }
 
 .article {
   max-width: 600px;
   margin: 0 auto 0 auto;
   text-align: center;
-  padding: 100px 20px 0 20px; }
+  padding: 100px 20px 100px 20px; }
   .article-h1 {
     font-size: 40px;
     font-weight: 900;
@@ -142,6 +143,97 @@ ARTICLE
 
 /*
 ***********
+FLIGHT
+************
+*/
+.flight {
+  position: relative;
+  padding-bottom: 200px;
+  z-index: 100; }
+  .flight-woo {
+    position: absolute; }
+    .flight-woo--1 {
+      bottom: -60px; }
+    .flight-woo--2 {
+      top: 180px;
+      left: 300px; }
+    .flight-woo--3 {
+      bottom: 30px;
+      right: 400px; }
+    .flight-woo--4 {
+      top: 150px;
+      right: 100px; }
+    .flight-woo--5 {
+      right: 30px; }
+    .flight-woo--6 {
+      left: 100px;
+      bottom: 80px; }
+
+/* animace img */
+.hidden {
+  opacity: 0; }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+/*
+***********
 FOOTER
 ************
 */
+.aside {
+  position: relative;
+  z-index: 80;
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .aside-img {
+    width: 100%;
+    height: auto; }
+
+.social {
+  position: relative;
+  padding: 100px 20px 50px 20px;
+  background: #e20079;
+  color: #f2f2f2;
+  z-index: 80; }
+  .social-box {
+    max-width: 1170px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px; }
+    .social-box-icon {
+      margin: 10px; }
+      .social-box-icon:hover {
+        color: #9f0056; }

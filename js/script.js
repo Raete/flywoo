@@ -1,3 +1,4 @@
+// parallax effect // 
 function castParallax() {
 
 	var opThresh = 350;
@@ -18,4 +19,4 @@ function castParallax() {
 	});
 }
 
-document.body.onload = castParallax();
+/* document.body.onload = */castParallax();
